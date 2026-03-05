@@ -2,14 +2,20 @@
   color-scheme: light;
   --bg-light: #f7f7fb;
   --bg-light-accent: #e9eef6;
-  --bg-dark: #0b0f1a;
-  --bg-dark-accent: #111827;
+  --bg-dark: #121a2a;
+  --bg-dark-accent: #1b273d;
   --glass-light: rgba(255, 255, 255, 0.85);
-  --glass-dark: rgba(15, 23, 42, 0.7);
+  --glass-dark: rgba(30, 41, 59, 0.66);
   --border-light: rgba(148, 163, 184, 0.35);
-  --border-dark: rgba(71, 85, 105, 0.45);
+  --border-dark: rgba(100, 116, 139, 0.52);
   --shadow-soft: 0 20px 45px -35px rgba(15, 23, 42, 0.45);
   --shadow-strong: 0 30px 65px -40px rgba(15, 23, 42, 0.65);
+  --landing-ink: #13233c;
+  --landing-subtle: #4b5563;
+  --landing-primary: #0f766e;
+  --landing-primary-strong: #115e59;
+  --landing-warm: #d97706;
+  --landing-border: rgba(15, 118, 110, 0.22);
 }
 
 html.dark {
@@ -29,8 +35,8 @@ body {
 
 html.dark body {
   background:
-    radial-gradient(circle at 10% 15%, rgba(30, 64, 175, 0.25), transparent 45%),
-    radial-gradient(circle at 80% 5%, rgba(56, 189, 248, 0.15), transparent 50%),
+    radial-gradient(circle at 10% 15%, rgba(59, 130, 246, 0.3), transparent 48%),
+    radial-gradient(circle at 80% 5%, rgba(45, 212, 191, 0.2), transparent 52%),
     linear-gradient(160deg, var(--bg-dark) 0%, var(--bg-dark-accent) 100%);
   color: #f8fafc;
 }
@@ -92,7 +98,7 @@ html.dark .app-shell::after {
 html.dark .surface-card {
   border-color: var(--border-dark);
   background: var(--glass-dark);
-  box-shadow: 0 25px 60px -40px rgba(15, 23, 42, 0.75);
+  box-shadow: 0 24px 52px -38px rgba(8, 47, 73, 0.62);
 }
 
 html.dark .surface-card:hover {
@@ -133,6 +139,140 @@ html.dark .theme-toggle {
 .focus-ring:focus-visible {
   outline: 2px solid rgba(59, 130, 246, 0.6);
   outline-offset: 2px;
+}
+
+.landing-hero {
+  border: 1px solid var(--landing-border);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(56, 189, 248, 0.2), transparent 34%),
+    radial-gradient(circle at 8% 92%, rgba(251, 191, 36, 0.2), transparent 42%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 249, 255, 0.9) 100%);
+}
+
+.landing-kicker {
+  color: var(--landing-primary-strong);
+}
+
+.landing-title {
+  color: var(--landing-ink);
+}
+
+.landing-lead {
+  color: var(--landing-subtle);
+}
+
+.landing-action {
+  border-color: rgba(15, 118, 110, 0.28);
+  color: var(--landing-primary-strong);
+}
+
+.landing-action:hover {
+  border-color: rgba(15, 118, 110, 0.45);
+  color: var(--landing-ink);
+}
+
+.landing-chip {
+  background: linear-gradient(120deg, var(--landing-primary) 0%, #0ea5a4 100%);
+  color: #f8fafc;
+}
+
+.landing-stats > *:nth-child(1) {
+  border-color: rgba(15, 118, 110, 0.24);
+  background: linear-gradient(150deg, rgba(15, 118, 110, 0.14) 0%, rgba(255, 255, 255, 0.88) 100%);
+}
+
+.landing-stats > *:nth-child(2) {
+  border-color: rgba(217, 119, 6, 0.28);
+  background: linear-gradient(150deg, rgba(251, 191, 36, 0.18) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.landing-stats > *:nth-child(3) {
+  border-color: rgba(30, 64, 175, 0.24);
+  background: linear-gradient(150deg, rgba(59, 130, 246, 0.16) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.landing-panel-title {
+  color: #1f2937;
+}
+
+.landing-panel-copy {
+  color: #4b5563;
+}
+
+.landing-input,
+.landing-select {
+  border-color: rgba(15, 118, 110, 0.24);
+  color: var(--landing-ink);
+}
+
+.landing-input:focus,
+.landing-select:focus {
+  border-color: rgba(15, 118, 110, 0.56);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.16);
+}
+
+html.dark .landing-hero {
+  border-color: rgba(45, 212, 191, 0.32);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(125, 211, 252, 0.3), transparent 36%),
+    radial-gradient(circle at 8% 92%, rgba(251, 191, 36, 0.2), transparent 44%),
+    linear-gradient(145deg, rgba(30, 41, 59, 0.78) 0%, rgba(17, 94, 89, 0.54) 100%);
+}
+
+html.dark .landing-kicker {
+  color: #2dd4bf;
+}
+
+html.dark .landing-title {
+  color: #f1f5f9;
+}
+
+html.dark .landing-lead {
+  color: #cbd5e1;
+}
+
+html.dark .landing-action {
+  border-color: rgba(45, 212, 191, 0.34);
+  color: #99f6e4;
+}
+
+html.dark .landing-action:hover {
+  border-color: rgba(125, 211, 252, 0.45);
+  color: #f0fdfa;
+}
+
+html.dark .landing-chip {
+  background: linear-gradient(120deg, #2dd4bf 0%, #0ea5e9 100%);
+  color: #06232d;
+}
+
+html.dark .landing-stats > *:nth-child(1) {
+  border-color: rgba(45, 212, 191, 0.26);
+  background: linear-gradient(150deg, rgba(13, 148, 136, 0.32) 0%, rgba(30, 41, 59, 0.86) 100%);
+}
+
+html.dark .landing-stats > *:nth-child(2) {
+  border-color: rgba(251, 191, 36, 0.3);
+  background: linear-gradient(150deg, rgba(245, 158, 11, 0.32) 0%, rgba(30, 41, 59, 0.88) 100%);
+}
+
+html.dark .landing-stats > *:nth-child(3) {
+  border-color: rgba(125, 211, 252, 0.28);
+  background: linear-gradient(150deg, rgba(37, 99, 235, 0.34) 0%, rgba(30, 41, 59, 0.88) 100%);
+}
+
+html.dark .landing-panel-title {
+  color: #e2e8f0;
+}
+
+html.dark .landing-panel-copy {
+  color: #cbd5e1;
+}
+
+html.dark .landing-input,
+html.dark .landing-select {
+  border-color: rgba(45, 212, 191, 0.28);
+  color: #e2e8f0;
 }
 
 @media (prefers-reduced-motion: reduce) {
